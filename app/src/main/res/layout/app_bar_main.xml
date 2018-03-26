@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.xpl.map.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main"
+        android:id="@+id/include" />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/changeMaptypeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="130dp"
+        android:layout_gravity="right"
+        app:fab_addButtonSize="mini"
+        app:fab_expandDirection="down"
+
+        >
+        <!--切换街道图按钮-->
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/normalMapBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            android:src="@drawable/ic_normalmap"
+            />
+        <!--切换遥感图按钮-->
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/satelliteMapBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            android:src="@drawable/ic_satellitemap"
+            />
+        <!--切换地形图按钮-->
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/darkMapBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            android:src="@drawable/ic_darkmap"
+            />
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/forcastBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            android:src="@drawable/ic_forcast"
+            />
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|left"-->
+        <!--android:layout_margin="@dimen/fab_margin"-->
+        <!--app:layout_anchor="@+id/include"-->
+        <!--app:layout_anchorGravity="top|right"-->
+        <!--app:srcCompat="@android:drawable/ic_input_add" />-->
+
+</android.support.design.widget.CoordinatorLayout>
